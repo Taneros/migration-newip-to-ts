@@ -131,7 +131,7 @@ module.exports = ({ development }) => {
       new CleanWebpackPlugin(),
       new RemoveEmptyScriptsPlugin(),
       new ProgressPlugin(true),
-      new HotModuleReplacementPlugin()
+      new HotModuleReplacementPlugin(),
     ],
     resolve: {
       extensions: ['.js', '.ts'],
