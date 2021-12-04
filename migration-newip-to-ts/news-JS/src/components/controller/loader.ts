@@ -1,4 +1,3 @@
-/* eslint-disable */
 interface Options {
   [key: string] : string;
   // sources : string;
