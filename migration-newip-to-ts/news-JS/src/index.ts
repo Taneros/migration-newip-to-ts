@@ -1,10 +1,10 @@
-import App from './components/app/app';
+import {App} from './components/app/app';
 import './global.css';
 
 const app = new App();
 app.start();
 
-// // webpack HMR
+// webpack HMR
 // if (module.hot) {
 //   module.hot.accept();
 //   module.hot.addStatusHandler((status) => {
