@@ -1,20 +1,8 @@
 import './news.css';
+import { INews } from '../../interfaces/intefaces'
 
-interface IData {
-  source: {
-    name: string,
-    id: string
-  },
-  title: string,
-  url: string,
-  description: string,
-  author: string,
-  urlToImage: string,
-  publishedAt: string
-}
-
-class News {
-  draw(data: Array<IData>) {
+export class News {
+  draw(data: Array<INews>) {
     const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
     const fragment = document.createDocumentFragment();
@@ -61,4 +49,4 @@ class News {
   }
 }
 
-export default News;
+// export default News;
