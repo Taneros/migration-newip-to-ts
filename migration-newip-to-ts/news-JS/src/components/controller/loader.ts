@@ -1,16 +1,7 @@
-interface Options {
-  [key: string] : string;
-  // sources : string;
-}
+import {Options, Data} from '../interfaces/intefaces'
 
-interface Data {
-    status?: string,
-    sources?: Array<Options>
-}
-
-class Loader {
+export class Loader {
   options: Options;
-
   baseLink: string;
 
   constructor(baseLink: string, options: Options) {
@@ -33,7 +24,6 @@ class Loader {
         console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
       throw Error(res.statusText);
     }
-
     return res;
   }
 
@@ -57,4 +47,4 @@ class Loader {
   }
 }
 
-export default Loader;
+// export default Loader;
