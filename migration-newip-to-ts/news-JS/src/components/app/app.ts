@@ -11,7 +11,6 @@ export class App {
     this.view = new AppView();
   }
 
-  
   start() {
     const sources = document.querySelector('.sources') as HTMLElement
     sources.addEventListener('click',
