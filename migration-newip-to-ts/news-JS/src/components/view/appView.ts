@@ -1,5 +1,5 @@
 import {News} from './news/news';
-import Sources from './sources/sources';
+import {Sources} from './sources/sources';
 import {IDataArt, IData} from '../interfaces/intefaces'
 
 
