@@ -105,3 +105,7 @@ dist
 
 # main project compilation folder
 dist
+
+#migrated files
+old-files
+/old-files
