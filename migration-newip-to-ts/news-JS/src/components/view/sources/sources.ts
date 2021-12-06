@@ -1,11 +1,9 @@
 import './sources.css';
+import {Options} from '../../interfaces/intefaces'
 
-interface Info {
-  [key:string]: string
-}
 
-class Sources {
-  draw(data: Array<Info>) {
+export class Sources {
+  draw(data: Array<Options>) {
     const fragment = document.createDocumentFragment() as DocumentFragment;
     const sourceItemTemp = document.querySelector('#sourceItemTemp') as HTMLTemplateElement;
     data.forEach((item) => {
@@ -21,4 +19,4 @@ class Sources {
   }
 }
 
-export default Sources;
+// export default Sources;
