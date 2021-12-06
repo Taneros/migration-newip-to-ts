@@ -1,6 +1,6 @@
-import {Options, Data} from '../interfaces/intefaces'
+import { Options, IData } from '../interfaces/intefaces';
 
-type callbackFunction = (data?: Data) => void;
+type callbackFunction = (data?: IData) => void;
 
 export class Loader {
   options: Options;
@@ -12,10 +12,10 @@ export class Loader {
   }
 
   getResp(
-  { endpoint = '' as string, options = {} as Options},
+    { endpoint = '' as string, options = {} as Options },
     callback = () => {
       console.error('No callback for GET response');
-    },
+    }
   ) {
     this.load('GET', endpoint, callback, options);
   }
@@ -44,7 +44,7 @@ export class Loader {
     fetch(this.makeUrl(options, endpoint), { method })
       .then(this.errorHandler)
       .then((res) => res.json())
-      .then((data: Data) => callback(data))
+      .then((data: IData) => callback(data))
       .catch((err: string) => console.error(err));
   }
 }

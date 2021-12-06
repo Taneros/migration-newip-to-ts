@@ -1,6 +1,6 @@
 interface IData {
-  status: string,
-  sources: [
+  status?: string,
+  sources?: [
       {
           id: string,
           name: string,
@@ -37,10 +37,10 @@ interface Options {
   // sources : string;
 }
 
-interface Data {
-    status?: string,
-    sources?: Array<Options>
-}
+// interface Data {
+//     status?: string,
+//     sources?: Array<Options>
+// }
 
 interface INews {
   source: {
@@ -56,4 +56,4 @@ interface INews {
 }
 
 
-export {IData, IDataArt, Options, Data, INews}
+export {IData, IDataArt, Options, INews}

@@ -13,6 +13,8 @@
       <h1>News Portal</h1>
     </header>
     <main>
+      <div class="category">
+      </div>
       <div class="sources buttons"></div>
       <div class="news"></div>
     </main>
@@ -25,6 +27,13 @@
     <template id="sourceItemTemp">
       <div class="source__item">
         <span class="source__item-name"></span>
+      </div>
+    </template>
+
+    <template id="newsCategory">
+      <div class="category__item">
+        <input type="checkbox" name="category" id="general" checked = "true">
+        <label for="general">General</label>
       </div>
     </template>
 

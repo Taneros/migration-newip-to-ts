@@ -1,8 +1,7 @@
-import {AppController} from '../controller/controller';
+import { AppController } from '../controller/controller';
 import { AppView } from '../view/appView';
 
 export class App {
-  
   controller: AppController;
   view: AppView;
 
@@ -12,11 +11,15 @@ export class App {
   }
 
   start() {
-    const sources = document.querySelector('.sources') as HTMLElement
-    sources.addEventListener('click',
-    (e : Event ) => this.controller.getNews(e, (data) => this.view.drawNews(data))
-    );
-    this.controller.getSources((data) => this.view.drawSources(data));
+    const sources = document.querySelector('.sources') as HTMLElement;
+    sources.addEventListener('click', (e: Event) => this.controller.getNews(e, (data) => this.view.drawNews(data)));
+    const category = document.querySelector('.category') as HTMLElement;
+    category.addEventListener('click', (e: Event) => {
+      console.log(e)
+      this.controller.getSources((data) => this.view.drawClick(data));
+    })
+    this.controller.getSources((data) => this.view.drawCategories(data));
+    // this.controller.getSources((data) => this.view.drawSources(data));
   }
 }
 

@@ -1,11 +1,21 @@
 import './sources.css';
-import {Options} from '../../interfaces/intefaces'
+import { Options } from '../../interfaces/intefaces';
 
+interface IChannel {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+  category: string;
+  language: string;
+  country: string;
+}
 
 export class Sources {
-  draw(data: Array<Options>) {
+  draw(data: Array<IChannel>) {
     const fragment = document.createDocumentFragment() as DocumentFragment;
     const sourceItemTemp = document.querySelector('#sourceItemTemp') as HTMLTemplateElement;
+
     data.forEach((item) => {
       const sourceClone = sourceItemTemp.content.cloneNode(true) as DocumentFragment;
       const sourceItemName = sourceClone.querySelector('.source__item-name') as HTMLElement;
@@ -14,9 +24,8 @@ export class Sources {
       sourceItem.setAttribute('data-source-id', item.id);
       fragment.append(sourceClone);
     });
-      const sources = document.querySelector('.sources') as HTMLElement;
-      sources.append(fragment)
+    const sources = document.querySelector('.sources') as HTMLElement;
+    sources.append(fragment);
+
   }
 }
-
-// export default Sources;

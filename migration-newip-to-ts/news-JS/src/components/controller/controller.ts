@@ -15,7 +15,6 @@ export class AppController extends AppLoader {
   }
 
   getNews(e: Event, callback: CallbackType<IDataArt>) {
-    // let target: HTMLElement = e.target;
     let target = <HTMLElement>e.target;
     const newsContainer = <HTMLElement>e.currentTarget;
 
