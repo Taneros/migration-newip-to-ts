@@ -1,5 +1,7 @@
 import {Options, Data} from '../interfaces/intefaces'
 
+type callbackFunction = (data?: Data) => void;
+
 export class Loader {
   options: Options;
   baseLink: string;
@@ -38,7 +40,7 @@ export class Loader {
     return url.slice(0, -1);
   }
 
-  load(method: string, endpoint: string, callback: (data?: Data) => void, options: Options = {}) {
+  load(method: string, endpoint: string, callback: callbackFunction, options: Options = {}) {
     fetch(this.makeUrl(options, endpoint), { method })
       .then(this.errorHandler)
       .then((res) => res.json())
