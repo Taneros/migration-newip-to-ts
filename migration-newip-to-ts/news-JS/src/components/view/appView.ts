@@ -58,7 +58,7 @@ export class AppView {
       });
     });
 
-    console.log(newsChannels);
+    // console.log(newsChannels);
     this.removeChildren()
     this.drawSources_(newsChannels);
   }

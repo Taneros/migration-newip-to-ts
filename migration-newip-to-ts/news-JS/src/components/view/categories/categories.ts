@@ -1,5 +1,6 @@
+import './categories.css';
 import { Options } from '../../interfaces/intefaces';
-import { Sources } from '../sources/sources';
+// import { Sources } from '../sources/sources';
 
 export class Category {
 
@@ -37,11 +38,11 @@ export class Category {
 
     Array.from(inputs).forEach(input => {
       const inputEl = input.querySelector('input') as HTMLInputElement
-      console.log(inputEl.checked)
+      // console.log(inputEl.checked)
       if(inputEl.checked) categoryArr.push(inputEl.id)
     })
 
-    console.log('cats: ', categoryArr)
+    // console.log('cats: ', categoryArr)
     return categoryArr
   }
 }

@@ -4,7 +4,7 @@ import { INews } from '../../interfaces/intefaces'
 export class News {
   draw(data: Array<INews>) {
     const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
-
+    const sources = document.querySelector('.sources') as HTMLElement;
     const fragment = document.createDocumentFragment();
     const newsItemTemp = document.querySelector('#newsItemTemp') as HTMLTemplateElement;
 
@@ -41,12 +41,11 @@ export class News {
       newsReadMoreEla.setAttribute('href', item.url);
       fragment.append(newsClone);
     });
-
     const newsEl = document.querySelector('.news') as HTMLElement;
     newsEl.innerHTML = '';
-
-    newsEl.appendChild(fragment);
+    const overlayContent = document.querySelector('.overlay-content') as HTMLElement
+    overlayContent.innerHTML = '';
+    overlayContent.appendChild(fragment);
+    sources.style.display = 'none';
   }
 }
-
-// export default News;

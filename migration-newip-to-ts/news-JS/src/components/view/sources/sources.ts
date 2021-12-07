@@ -1,5 +1,5 @@
 import './sources.css';
-import { Options } from '../../interfaces/intefaces';
+// import { Options } from '../../interfaces/intefaces';
 
 interface IChannel {
   id: string;
