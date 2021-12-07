@@ -1,15 +1,15 @@
-
+import './overlay.css'
 
 export const overay = {
 
   openNav() {
-    const myNavEl = document.getElementById("myNav") as HTMLElement;
-    myNavEl.style.height="max-content";
+    const overlayNews = document.getElementById("overlayNews") as HTMLElement;
+    overlayNews.style.height="max-content";
   },
 
   closeNav() {
-    const myNavEl = document.getElementById("myNav") as HTMLElement;
-    myNavEl.style.height="0%";
+    const overlayNews = document.getElementById("overlayNews") as HTMLElement;
+    overlayNews.style.height="0%";
   }
 
 }

@@ -55,5 +55,15 @@ interface INews {
   publishedAt: string
 }
 
+interface IChannel {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+  category: string;
+  language: string;
+  country: string;
+}
 
-export {IData, IDataArt, Options, INews}
+
+export {IData, IDataArt, Options, INews, IChannel}

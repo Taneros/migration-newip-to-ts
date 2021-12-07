@@ -1,6 +1,5 @@
 import './categories.css';
 import { Options } from '../../interfaces/intefaces';
-// import { Sources } from '../sources/sources';
 
 export class Category {
 

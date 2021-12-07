@@ -1,15 +1,5 @@
 import './sources.css';
-// import { Options } from '../../interfaces/intefaces';
-
-interface IChannel {
-  id: string;
-  name: string;
-  description: string;
-  url: string;
-  category: string;
-  language: string;
-  country: string;
-}
+import { IChannel } from '../../interfaces/intefaces';
 
 export class Sources {
   draw(data: Array<IChannel>) {

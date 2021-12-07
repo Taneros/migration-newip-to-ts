@@ -1,17 +1,8 @@
 import { News } from './news/news';
 import { Sources } from './sources/sources';
 import { Category } from './categories/categories';
-import { IDataArt, IData, Options } from '../interfaces/intefaces';
+import { IDataArt, IData, Options, IChannel } from '../interfaces/intefaces';
 
-interface IChannel {
-  id: string;
-  name: string;
-  description: string;
-  url: string;
-  category: string;
-  language: string;
-  country: string;
-}
 
 export class AppView {
   news: News;
