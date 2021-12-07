@@ -1,0 +1,8 @@
+.category {
+  display: flex;
+  height: 50px;
+  padding: 10px 10px;
+  margin: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+}
